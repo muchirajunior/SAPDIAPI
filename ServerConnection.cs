@@ -1,17 +1,18 @@
+using SAPbobsCOM;
+
 namespace SAPAPI;
 
 public class SAPServerConnection{
     public dynamic ConnectToSAP(){
-        SAPbobsCOM.Company company=new SAPbobsCOM.Company();
+        Company company=new Company();
         try{
-            company.CompanyDB="192.168.1.2";
             company.Server="SAPSRV";
-            company.LicenseServer="";
-            // company.SLDServer ="";
-            company.DbUserName="sa";
-            company.DbPassword="1234";
+            company.CompanyDB="XYZ_LIVE";
+            // company.LicenseServer="";
+            // company.DbUserName="sa";
             company.UserName="manager";
-            company.DbServerType=SAPbobsCOM.BoDataServerTypes.dst_MSSQL;
+            company.DbPassword="1234";
+            company.DbServerType=BoDataServerTypes.dst_MSSQL2012;
             company.UseTrusted=true;
             int ret = company.Connect();
             string error=company.GetLastErrorDescription();

@@ -7,6 +7,6 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
     <PackageReference Include="SAPB1DIAPI9.0" Version="9.0.58.1"/>
-    <PackageReference Include="Interop.SAPbobsCOM" Version="8.82.76"/>
+    <PackageReference Include="Interop.SAPbobsCOM" Version="*"/>
   </ItemGroup>
 </Project>
